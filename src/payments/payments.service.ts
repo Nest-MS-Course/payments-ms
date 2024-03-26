@@ -34,8 +34,8 @@ export class PaymentsService {
       },
       line_items: lineItems,
       mode: 'payment',
-      success_url: `http://localhost:3003/payments/success`,
-      cancel_url: `http://localhost:3003/payments/cancel`,
+      success_url: envs.stripe_success_url,
+      cancel_url: envs.stripe_cancel_url,
     })
 
     return session;
